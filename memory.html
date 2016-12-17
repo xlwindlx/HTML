@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>추억</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <script src="js/jquery.js"></script><!-- 메뉴 토글 기능-->
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- 사이드바 -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav"> <!-- 사이드바 메뉴 css -->
+                    <li class="sidebar-brand"><a href="./main.html">나의 소개 홈페이지</a></li>
+                    <li><a href = "./me.html">나</a></li>
+                    <li><a href = "./friends.html">가족/친구</a></li>
+                    <li><a href = "./memory.html">추억</a></li>
+                    <li><a href = "./hobby.html">취미</a></li>
+                    <li><a href = "./tresure.html">보물지도</a></li>
+                </ul>
+            </div>
+            
+        <a href="toggle_menu" class="btn btn-default" id="toggle_menu">메뉴 숨기기</a>
+        </div>
+        
+        <!-- 메뉴 토글 버튼 -->
+        <script>
+        $("#toggle_menu").click(function(e)
+        {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        </script>
+    </body>
+</html>
