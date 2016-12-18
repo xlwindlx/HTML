@@ -5,8 +5,10 @@
         <title>가족/친구</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/simple-sidebar.css" rel="stylesheet">
-        <script src="js/jquery.js"></script><!-- 메뉴 토글 기능-->
+        <!-- 메뉴 토글 기능-->
+        <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     </head>
     <body>
         <div id="wrapper">
@@ -21,10 +23,70 @@
                     <li><a href = "./tresure.html">보물지도</a></li>
                 </ul>
             </div>
-            
+            <div class="w3-container w3-teal">
+              <h1>가족/친구</h1>
+            </div>
+
+            <div class="w3-row-padding w3-margin-top">
+              <div class="w3-third">
+                <div class="w3-card-2">
+                  <img src="img_fjords_wide.jpg" style="width:100%">
+                  <div class="w3-container">
+                    <h5>5 Terre</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-third">
+                <div class="w3-card-2">
+                  <img src="img_mountains_wide.jpg" style="width:100%">
+                  <div class="w3-container">
+                    <h5>Monterosso</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-third">
+                <div class="w3-card-2">
+                  <img src="img_nature_wide.jpg" style="width:100%">
+                  <div class="w3-container">
+                    <h5>Vernazza</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w3-row-padding w3-margin-top">
+              <div class="w3-third">
+                <div class="w3-card-2">
+                  <img src="img_manarola.jpg" style="width:100%">
+                  <div class="w3-container">
+                    <h5>Manarola</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-third">
+                <div class="w3-card-2">
+                  <img src="img_corniglia.jpg" style="width:100%">
+                  <div class="w3-container">
+                    <h5>Corniglia</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-third">
+                <div class="w3-card-2">
+                  <img src="img_riomaggiore.jpg" style="width:100%">
+                  <div class="w3-container">
+                    <h5>Riomaggiore</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
         <a href="toggle_menu" class="btn btn-default" id="toggle_menu">메뉴 숨기기</a>
         </div>
-        
+
         <!-- 메뉴 토글 버튼 -->
         <script>
         $("#toggle_menu").click(function(e)
@@ -32,6 +94,7 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+
         </script>
     </body>
 </html>

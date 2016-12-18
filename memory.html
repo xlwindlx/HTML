@@ -1,15 +1,24 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" >
         <title>추억</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/simple-sidebar.css" rel="stylesheet">
-        <script src="js/jquery.js"></script><!-- 메뉴 토글 기능-->
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <!-- 메뉴 토글 기능-->
+        <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <style>
+        body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+        body {font-size:16px;}
+        .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+        .w3-half img:hover{opacity:1}
+        </style>
     </head>
     <body>
-        <div id="wrapper">
+      <div id="wrapper">
             <!-- 사이드바 -->
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav"> <!-- 사이드바 메뉴 css -->
@@ -21,10 +30,37 @@
                     <li><a href = "./tresure.html">보물지도</a></li>
                 </ul>
             </div>
-            
+            <!-- !PAGE CONTENT! -->
+            <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+              <!-- Header -->
+              <div class="w3-container" style="margin-top:80px" id="showcase">
+                <h1 class="w3-jumbo"><b>추억</b></h1>
+                <hr style="width:50px;border:5px solid red" class="w3-round">
+              </div>
+
+              <!-- Photo grid (modal) -->
+              <div class="w3-row-padding">
+                <div class="w3-half">
+                  <img src="./img_fjords_wide.jpg" style="width:320px; height:180px" onclick="onClick(this)" alt="Concrete meets bricks">
+                  <img src="./img_mountains_wide.jpg" style="width:320px; height:180px" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+                  <img src="./img_nature_wide.jpg" style="width:320px; height:180px" onclick="onClick(this)" alt="White walls with designer chairs">
+                </div>
+              </div>
+
+              <!-- Modal for full size images on click-->
+              <div id="modal01" class="w3-modal w3-black w3-padding-0" onclick="this.style.display='none'">
+                <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright">×</span>
+                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                  <img id="img01" class="w3-image">
+                  <p id="caption"></p>
+                </div>
+              </div>
+
+
         <a href="toggle_menu" class="btn btn-default" id="toggle_menu">메뉴 숨기기</a>
         </div>
-        
+
         <!-- 메뉴 토글 버튼 -->
         <script>
         $("#toggle_menu").click(function(e)
@@ -32,6 +68,24 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+        // 이미지 확장
+        function w3_open() {
+            document.getElementById("mySidenav").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidenav").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
         </script>
     </body>
 </html>
