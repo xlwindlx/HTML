@@ -11,17 +11,19 @@
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
         body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-        body {font-size:16px;}
+        body{font-size:16px;}
+        img{border-radius: 30px}
         .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
         .w3-half img:hover{opacity:1}
         </style>
     </head>
     <body>
       <div id="wrapper">
-            <!-- 사이드바 -->
             <div id="sidebar-wrapper">
-                <ul class="sidebar-nav"> <!-- 사이드바 메뉴 css -->
+                <!-- 사이드바 메뉴 css -->
+                <ul class="sidebar-nav">
                     <li class="sidebar-brand"><a href="./main.html">나의 소개 홈페이지</a></li>
                     <li><a href = "./me.html">나</a></li>
                     <li><a href = "./friends.html">가족/친구</a></li>
@@ -30,44 +32,69 @@
                     <li><a href = "./tresure.html">보물지도</a></li>
                 </ul>
             </div>
-            <!-- !PAGE CONTENT! -->
-            <div class="w3-main" style="margin-left:340px;margin-right:40px">
+            <br>
+            <h1 style="font-family:Nanum Pen Script; font-size:400%; padding-left:300px; padding-top:50px;">오랜 추억들</h1>
 
-              <!-- Header -->
-              <div class="w3-container" style="margin-top:80px" id="showcase">
-                <h1 class="w3-jumbo"><b>추억</b></h1>
-                <hr style="width:50px;border:5px solid red" class="w3-round">
+            <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px;">
+              <!-- 1번째 문단 -->
+              <div class="w3-row-padding w3-padding-16 w3-center">
+                <div class="w3-quarter">
+                  <img src="추억1.jpg" alt="" style="width:100%" onclick="onClick(this)">
+                  <h3></h3>
+                </div>
+                <div class="w3-quarter">
+                  <img src="추억2.jpg" alt="" style="width:100%" onclick="onClick(this)">
+                  <h3></h3>
+                </div>
+                <div class="w3-quarter">
+                  <img src="추억3.jpg" alt="" style="width:100%" onclick="onClick(this)">
+                  <h3></h3>
+                </div>
+                <div class="w3-quarter">
+                  <img src="추억4.jpg" alt="" style="width:100%" onclick="onClick(this)">
+                  <h3></h3>
+                </div>
               </div>
-
-              <!-- Photo grid (modal) -->
-              <div class="w3-row-padding">
-                <div class="w3-half">
-                  <img src="./img_fjords_wide.jpg" style="width:320px; height:180px" onclick="onClick(this)" alt="Concrete meets bricks">
-                  <img src="./img_mountains_wide.jpg" style="width:320px; height:180px" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
-                  <img src="./img_nature_wide.jpg" style="width:320px; height:180px" onclick="onClick(this)" alt="White walls with designer chairs">
+              <!-- 2번째 문단 -->
+              <div class="w3-row-padding w3-padding-16 w3-center">
+                <div class="w3-quarter">
+                  <img src="추억5.jpg" alt="" style="width:100%" onclick="onClick(this)">
+                  <h3></h3>
+                </div>
+                <div class="w3-quarter">
+                  <img src="추억6.jpg" alt="" style="width:100%" onclick="onClick(this)">
+                  <h3></h3>
+                </div>
+                <div class="w3-quarter">
+                  <img src="추억7.jpg" alt="" style="width:100%" onclick="onClick(this)">
+                  <h3></h3>
+                </div>
+                <div class="w3-quarter">
+                  <img src="추억8.jpg" alt="" style="width:100%" onclick="onClick(this)">
+                  <h3></h3>
                 </div>
               </div>
 
-              <!-- Modal for full size images on click-->
-              <div id="modal01" class="w3-modal w3-black w3-padding-0" onclick="this.style.display='none'">
-                <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright">×</span>
-                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-                  <img id="img01" class="w3-image">
-                  <p id="caption"></p>
+
+                <!-- Modal for full size images on click-->
+                <div id="modal01" class="w3-modal w3-black w3-padding-0" onclick="this.style.display='none'">
+                  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                    <img id="img01" class="w3-image">
+                    <p id="caption"></p>
+                  </div>
                 </div>
-              </div>
-
-
-        <a href="toggle_menu" class="btn btn-default" id="toggle_menu">메뉴 숨기기</a>
+            </div>
+          <a href="toggle_menu" class="btn btn-default" id="toggle_menu">메뉴 숨기기</a>
         </div>
 
-        <!-- 메뉴 토글 버튼 -->
         <script>
+        // 메뉴 토글 버튼
         $("#toggle_menu").click(function(e)
         {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+
         // 이미지 확장
         function w3_open() {
             document.getElementById("mySidenav").style.display = "block";

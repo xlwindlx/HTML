@@ -5,14 +5,34 @@
         <title>취미</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/simple-sidebar.css" rel="stylesheet">
-        <script src="js/jquery.js"></script><!-- 메뉴 토글 기능-->
+        <!-- 메뉴 토글 기능-->
+        <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+        h1
+        {
+          font-family:"Nanum Pen Script";
+          padding-top: 50px;
+          padding-left: 350px;
+          font-size: 400%;
+        }
+        .col-xs-1, .col-xs-2, .col-xs-3, .col-md-5, .col-md-7
+        {
+          margin:auto;
+          padding: 30px;
+          font-weight: bold;
+          font-size: 200%;
+          font-family:"Nanum Pen Script";
+        }
+        </style>
     </head>
-    <body>
+    <body background="여가배경.jpg">
         <div id="wrapper">
             <!-- 사이드바 -->
             <div id="sidebar-wrapper">
-                <ul class="sidebar-nav"> <!-- 사이드바 메뉴 css -->
+                <!-- 사이드바 메뉴 css -->
+                <ul class="sidebar-nav">
                     <li class="sidebar-brand"><a href="./main.html">나의 소개 홈페이지</a></li>
                     <li><a href = "./me.html">나</a></li>
                     <li><a href = "./friends.html">가족/친구</a></li>
@@ -21,10 +41,33 @@
                     <li><a href = "./tresure.html">보물지도</a></li>
                 </ul>
             </div>
-            
-        <a href="toggle_menu" class="btn btn-default" id="toggle_menu">메뉴 숨기기</a>
-        </div>
-        
+                <br>
+                <h1>나의 여가생활</h1>
+                <br>
+                <div class="row">
+                  <div class="col-xs-2"></div>
+                  <div class="col-xs-1"><img src="취미-음악.jpg" height="140px"></div>
+                  <div class="col-md-7">음악감상은 취미라기보다는 저의 일상과 같습니다.<br>이동을 할 때던, 집에서 시간을 보내던, 무엇을 하던지 혼자만의 시간을 보낼 때에는 항상 음악을 듣습니다.<br>물론 정말 집중을 해야될 때는 지양하지만 다양한 장르의 음악을 듣는 것은 여러분야에서 트렌드를 이해하는데에도 도움이 될 때가 있습니다.</div>
+                  <div class="col-xs-2"></div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-xs-2"></div>
+                  <div class="col-md-5">자전거타기는 유일하게 즐기는 스포츠입니다.<br>원래 야외활동을 좋아하지 않았지만 제대로 된 자전거를 가지고 난 뒤로는 주말마다 탈 정도로 빈도 수가 정말 많이 늘었습니다.<br>특히 이번학기에는 자전거를 이용한 교양수업을 통해서 여러가지 자전거이용에 대한 규범도 배우고 여러사람들과 같이 라이딩하는 재미도 새롭게 느낄 수 있었습니다.</div>
+                  <div class="col-xs-3"><img src="취미-자전거.jpg" width="250px" height="200px"></div>
+                  <div class="col-xs-2"></div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-xs-2"></div>
+                  <div class="col-xs-1"><img src="취미-게임.jpg" width="150px" height="150px"></div>
+                  <div class="col-md-7">게임의 장르는 가리지 않습니다.<br>어렸을 때에는 PC게임 중에서도 온라인게임, 즉 무료로 플레이 가능한 게임만 했지만 성인이 되어 돈을 벌때부터는 콘솔게임, 비디오게임 등을 조금씩 구매하여 다양한 장르의 게임을 접해보고 있습니다.<br>게임은 프로그래밍과 그래픽디자이너들의 모든 노력의 결과물이기 때문에 프로그래머로서의 사고에도 도움이 되는 것 같습니다.</div>
+                  <div class="col-xs-2"></div>
+                </div>
+
+              <a href="toggle_menu" class="btn btn-default" id="toggle_menu">메뉴 숨기기</a>
+            </div>
+
         <!-- 메뉴 토글 버튼 -->
         <script>
         $("#toggle_menu").click(function(e)

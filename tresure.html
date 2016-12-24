@@ -5,14 +5,57 @@
         <title>보물지도</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/simple-sidebar.css" rel="stylesheet">
-        <script src="js/jquery.js"></script><!-- 메뉴 토글 기능-->
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </head>
+    <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+    table,caption,th,td,tr,h2,h3
+    {
+      color:#229966;
+      font-family:"Nanum Pen Script";
+    }
+    th
+    {
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 150%;
+      padding-bottom: 15px;
+    }
+    caption, td
+    {
+        padding: 30px 30px 30px 30px;
+    }
+    h2
+    {
+      text-align: center;
+      font-size: 400%;
+      font-weight: bold;
+    }
+    caption
+    {
+      text-align: center;
+      font-size: 200%;
+      font-weight: bold;
+      color: inherit;
+      font-family: comic-sans;
+    }
+    table
+    {
+      text-align: center;
+      margin: auto;
+    }
+    </style>
+
     <body>
         <div id="wrapper">
             <!-- 사이드바 -->
             <div id="sidebar-wrapper">
-                <ul class="sidebar-nav"> <!-- 사이드바 메뉴 css -->
+                <!-- 사이드바 메뉴 css -->
+                <ul class="sidebar-nav">
                     <li class="sidebar-brand"><a href="./main.html">나의 소개 홈페이지</a></li>
                     <li><a href = "./me.html">나</a></li>
                     <li><a href = "./friends.html">가족/친구</a></li>
@@ -21,42 +64,73 @@
                     <li><a href = "./tresure.html">보물지도</a></li>
                 </ul>
             </div>
+            <br>
+            <h2>나의 버킷리스트</h2>
         <table>
-            <caption>나의 버킷리스트</caption>
+            <caption>1년 후</caption>
             <thead>
-                <th></th>
-                <th>1년 후</th>
-                <th>5년 후</th>
-                <th>10년 후</th>
+              <th><span class="w3-tag w3-teal w3-round">하고싶은 일</span></th>
+              <th><span class="w3-tag w3-teal w3-round">갖고싶은 물건</span></th>
+              <th><span class="w3-tag w3-teal w3-round">가고싶은 곳</span></th>
             </thead>
             <tbody>
-                <tr>
-                    <th>직업</th>
-                    <td><img src="img_fjords_wide.jpg" style="width:320px; height:180px;"></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>하고 있을 일</th>
-                </tr>
-                <tr>
-                    <th>취미생활</th>
-                    <td></td>
-                    <td><img src="img_mountains_wide.jpg" style="width:320px; height:180px;"></td>
-                    <td></td>
-                </tr>
+                <td><div class="img"><span class="fadeIn" data-src="1년후-하고싶은것.jpg"></span><div class="desc"><h3>네트워크 관리자</h3></div></div></td>
+                <td><div class="img"><span class="fadeIn" data-src="1년후-갖고싶은것.jpg"></span><div class="desc"><h3>맥북</h3></div></div></td>
+                <td><div class="img"><span class="fadeIn" data-src="1년후-가고싶은곳.jpg"></span><div class="desc"><h3>일본</h3></div></div></td>
             </tbody>
-        </table>    
-       
+          </table>
+          <br>
+          <table>
+            <caption>5년 후</cation>
+              <thead>
+                <th><span class="w3-tag w3-teal w3-round">하고싶은 일</span></th>
+                <th><span class="w3-tag w3-teal w3-round">갖고싶은 물건</span></th>
+                <th><span class="w3-tag w3-teal w3-round">가고싶은 곳</span></th>
+            </thead>
+            <tbody>
+              <td><div class="img"><span class="fadeIn" data-src="5년후-하고싶은것.jpg"></span><div class="desc"><h3>해외여행</h3></div></div></td>
+              <td><div class="img"><span class="fadeIn" data-src="5년후-갖고싶은것.jpg"></span><div class="desc"><h3>I MAC</h3></div></div></td>
+              <td><div class="img"><span class="fadeIn" data-src="5년후-가고싶은곳.jpg"></span><div class="desc"><h3>캐나다</h3></div></div></td>
+            </tbody>
+          </table>
+          <br>
+          <table>
+            <caption>10년 후</cation>
+              <thead>
+                <th><span class="w3-tag w3-teal w3-round">하고싶은 일</span></th>
+                <th><span class="w3-tag w3-teal w3-round">갖고싶은 물건</span></th>
+                <th><span class="w3-tag w3-teal w3-round">가고싶은 곳</span></th>
+            </thead>
+            <tbody>
+              <td><div class="img"><span class="fadeIn" data-src="10년후-하고싶은것.jpg"></span><div class="desc"><h3>가정 꾸리기</h3></div></div></td>
+              <td><div class="img"><span class="fadeIn" data-src="10년후-갖고싶은것.jpg"></span><div class="desc"><h3>드림카</h3></div></div></td>
+              <td><div class="img"><span class="fadeIn" data-src="10년후-가고싶은곳.jpg"></span><div class="desc"><h3>유럽/미대륙 일주</h3></div></div></td>
+            </tbody>
+          </table>
+
         <a href="toggle_menu" class="btn btn-default" id="toggle_menu">메뉴 숨기기</a>
         </div>
-        
-        <!-- 메뉴 토글 버튼 -->
+
         <script>
+        // 메뉴 토글 버튼
         $("#toggle_menu").click(function(e)
         {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
+        });
+
+        // Fade in
+        $(".fadeIn").each(function() {
+        var src = $(this).data("src");
+        if (src) {
+            var img = new Image();
+            img.style.display = "none";
+            img.onload = function() {
+                $(this).fadeIn(1500);
+            };
+            $(this).append(img);
+            img.src = src;
+        }
         });
         </script>
     </body>

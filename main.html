@@ -5,33 +5,41 @@
         <title>자기소개 홈페이지</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/simple-sidebar.css" rel="stylesheet">
-        <script src="js/jquery.js"></script><!-- 메뉴 토글 기능-->
+        <!-- 메뉴 토글 기능-->
+        <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <style>
+
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+        h1
+        {
+          font-size: 400%;
+          font-weight: bold;
+          color:#229966;
+          font-family:"Nanum Pen Script";
+          text-align: center;
+          margin-top: 100px;
+          position: relative;
+          padding: auto;
+        }
+        img
+        {
+          margin: 50px;
+          position: relative;
+        }
+      </style>
     </head>
     <body>
-        <div id="wrapper">
-            <!-- 사이드바 -->
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav"> <!-- 사이드바 메뉴 css -->
-                    <li class="sidebar-brand"><a href="./main.html">나의 소개 홈페이지</a></li>
-                    <li><a href = "./me.html">나</a></li>
-                    <li><a href = "./friends.html">가족/친구</a></li>
-                    <li><a href = "./memory.html">추억</a></li>
-                    <li><a href = "./hobby.html">취미</a></li>
-                    <li><a href = "./tresure.html">보물지도</a></li>
-                </ul>
-            </div>
-        <!--본문 영역-->
-        <a href="toggle_menu" class="btn btn-default" id="toggle_menu">메뉴 숨기기</a>
+      <p>
+        <h1>저의 홈페이지에 <br> 오신걸 환영합니다!</h1>
+        <div class="row" style="text-align:center;">
+          <a href="me.html" target="_self"><img src="나.jpg" border="0" alt="나" width="170px" height="170px"></a>
+          <a href="friends.html" target="_self"><img src="가족친구.jpg" border="0" alt="가족/친구" width="170px" height="170px"></a>
+          <a href="memory.html" target="_self"><img src="추억.jpg" border="0" alt="추억" width="170px" height="170px"></a>
+          <br>
+          <a href="hobby.html" target="_self"><img src="취미.jpg" border="0" alt="취미" width="170px" height="170px"></a>
+          <a href="tresure.html" target="_self"><img src="보물지도.jpg" border="0" alt="보물지도" width="170px" height="170px"></a>
         </div>
-        
-        <!-- 메뉴 토글 버튼 -->
-        <script>
-        $("#toggle_menu").click(function(e)
-        {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-        </script>
+      </p>
     </body>
 </html>

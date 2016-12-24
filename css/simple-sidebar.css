@@ -24,7 +24,7 @@
 
 #sidebar-wrapper {
     z-index: 1000;
-    position: fixed;
+    position:fixed;
     left: 250px;
     width: 0;
     height: 100%;
@@ -61,7 +61,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    
+
 }
 
 .sidebar-nav li {
@@ -91,7 +91,7 @@
     height: 65px;
     font-size: 17px;
     line-height: 60px;
-    font-family: fantasy;  
+    font-family: fantasy;
 }
 
  /* 타이틀 글씨 */
@@ -107,7 +107,7 @@
 
 @media(min-width:768px) {
     /* 토글 메뉴버튼 */
-    #wrapper { 
+    #wrapper {
         padding-left: 200px;
     }
 
